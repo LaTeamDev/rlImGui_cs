@@ -1,4 +1,6 @@
+using System.Numerics;
 using System.Runtime.InteropServices;
+using ZeroElectric.Vinculum;
 
 namespace rlImGui_cs;
 
@@ -52,8 +54,5 @@ public static unsafe partial class rlImGui
 
     [DllImport("rlImGui", CallingConvention = CallingConvention.Cdecl, EntryPoint = "rlImGuiImageButtonSize", ExactSpelling = true)]
     [return: NativeTypeName("_Bool")]
-    public static extern bool ImageButtonSize([NativeTypeName("const char *")] sbyte* name, [NativeTypeName("const Texture *")] Texture* image, [NativeTypeName("struct ImVec2")] ImVec2 size);
-
-    [NativeTypeName("#define FONT_AWESOME_ICON_SIZE 11")]
-    public const int FONT_AWESOME_ICON_SIZE = 11;
+    public static extern bool ImageButtonSize([NativeTypeName("const char *")] sbyte* name, [NativeTypeName("const Texture *")] Texture* image, [NativeTypeName("struct ImVec2")] Vector2 size);
 }
