@@ -1,0 +1,6 @@
+[submodule "Native/rlImGui"]
+	path = Native/rlImGui
+	url = https://github.com/raylib-extras/rlImGui
+[submodule "Native/raylib"]
+	path = Native/raylib
+	url = https://github.com/raysan5/raylib
